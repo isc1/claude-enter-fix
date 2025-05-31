@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Enter Key Fix",
+  "version": "1.0",
+  "description": "Swaps Enter and Shift+Enter behavior in Claude interface - Enter for newline, Shift+Enter to submit",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
